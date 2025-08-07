@@ -1,9 +1,18 @@
 package com.cova.modals;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.time.LocalDateTime;
 
+@Entity
 public class User {
-    private int id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String firstName;
     private String lastName;
     private String username;
@@ -17,7 +26,7 @@ public class User {
     public User() {};
 
     // Constructor
-    public User(int id,
+    public User(Long id,
                 String firstName,
                 String lastName,
                 String username,
@@ -38,7 +47,7 @@ public class User {
     }
 
     // Setter Methods
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -75,7 +84,7 @@ public class User {
     }
 
     // Getter Methods
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
