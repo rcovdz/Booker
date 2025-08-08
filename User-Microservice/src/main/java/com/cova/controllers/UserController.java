@@ -1,5 +1,6 @@
 package com.cova.controllers;
 
+import com.cova.exceptions.UserException;
 import com.cova.modals.User;
 import com.cova.repository.UserRepository;
 import jakarta.validation.Valid;
@@ -31,7 +32,7 @@ public class UserController {
         if(otp.isPresent()) {
             return otp.get();
         }
-        throw new Exception("USER NOT FOUND...");
+        throw new UserException("USER NOT FOUND...");
     }
 
     @PutMapping("/api/users/{id}")
@@ -50,7 +51,7 @@ public class UserController {
 
             return userRepository.save(existingUser);
         }
-        throw new Exception("USER NOT FOUND...");
+        throw new UserException("USER NOT FOUND...");
 
     }
 
@@ -61,6 +62,6 @@ public class UserController {
             userRepository.deleteById(otp.get().getId());
             return "USER DELETED";
         }
-        throw new Exception("USER NOT FOUND...");
+        throw new UserException("USER NOT FOUND...");
     }
 }
