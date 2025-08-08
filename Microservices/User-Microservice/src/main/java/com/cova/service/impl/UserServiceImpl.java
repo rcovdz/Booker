@@ -1,7 +1,7 @@
 package com.cova.service.impl;
 
 import com.cova.exceptions.UserException;
-import com.cova.modals.User;
+import com.cova.modal.User;
 import com.cova.repository.UserRepository;
 import com.cova.service.UserService;
 import lombok.RequiredArgsConstructor;

@@ -1,7 +1,7 @@
 package com.cova.service;
 
 import com.cova.exceptions.UserException;
-import com.cova.modals.User;
+import com.cova.modal.User;
 
 import java.util.List;
 

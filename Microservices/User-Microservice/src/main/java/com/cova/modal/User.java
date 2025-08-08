@@ -1,4 +1,4 @@
-package com.cova.modals;
+package com.cova.modal;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

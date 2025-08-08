@@ -1,7 +1,6 @@
 package com.cova.controllers;
 
-import com.cova.exceptions.UserException;
-import com.cova.modals.User;
+import com.cova.modal.User;
 import com.cova.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
